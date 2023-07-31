@@ -1,0 +1,32 @@
+/*!-----------------------------------------------------------------
+	.header - модуль шапка сайта
+ -----------------------------------------------------------------*/
+.header
+	background-color rgba(51, 153, 204, 0.5)
+	&__menu
+		background-color: rgba(10, 31, 41, 0.8)
+		height 32px
+	&__title
+		padding 15px 0
+	&__images
+		display flex
+		justify-content space-around
+		align-items center
+	&__img
+		width 200px
+	&__breadcrumb
+		background-color: var(--colorGray)
+
+// Mobile
+@media screen and (max-width: 425px)
+	.header
+		&__img
+			width 120px
+@media screen and (max-width: 375px)
+	.header
+		&__img
+			width 100px
+@media screen and (max-width: 320px)
+	.header
+		&__img
+			width 90px

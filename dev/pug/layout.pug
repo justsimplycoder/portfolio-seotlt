@@ -1,0 +1,64 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="description", content="")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet")
+		link(rel="stylesheet", href="/css/swiper-bundle.min.css")
+		// build:css
+		link(rel="stylesheet", href="/css/main.css")
+		link(rel="stylesheet", type="text/css", href="/css/print.css", media="print")
+		// endbuild
+		block title
+			title SEOtlt
+
+		block top-script
+
+	body.page
+		header.header
+			.header__menu
+				.page__wrap
+					nav.menu
+						.hamburger: .hamburger__line
+						ul.menu__lists
+							li.menu__item: a(href="/").menu__link Главная
+							li.menu__item: a(href="/doc/").menu__link Документация
+							li.menu__item: a(href="404.html").menu__link 404
+
+		.page__content
+			.page__wrap
+				block content
+
+		footer.page__footer.footer
+			.footer__menu
+				nav.menu
+					ul.menu__lists
+						li.menu__item: a(href="/").menu__link Главная
+						li.menu__item: a(href="/doc/").menu__link Документация
+						li.menu__item: a(href="404.html").menu__link 404
+			.footer__info
+				.footer__contact
+					.footer__title Project manager
+					.footer__phone +7 (8482) 78-36-06
+					.footer__email info@seotlt.ru
+				.footer__contact
+					.footer__title Sales manager
+					.footer__phone +7 (8482) 78-36-06
+					.footer__email anna@seotlt.ru
+				.footer__contact
+					.footer__title Account manager
+					.footer__phone +7 (8482) 78-36-06
+					.footer__email boris@seotlt.ru
+				.footer__vacancy
+			.footer__social
+				<a class="vk" href="https://vk.com/seotlt" target="_blank">Вконтакте</a>
+				<a href="https://www.facebook.com/groups/718092454975847/" target="_blank">Facebook</a>
+
+		block bottom-script
+			script(src="/js/swiper-bundle.min.js")
+			// build:js_bottom
+			script(src="/js/script.js", type="module")
+			// endbuild

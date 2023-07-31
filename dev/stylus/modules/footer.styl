@@ -1,0 +1,37 @@
+/*!-----------------------------------------------------------------
+	.footer - модуль подвал сайта
+ -----------------------------------------------------------------*/
+.footer
+	background-color var(--colorGray)
+	&__info
+		padding-top:15px
+		padding-bottom 15px
+		display flex
+		justify-content space-between
+	&__socicons
+		padding 0
+		margin 0
+		list-style none
+		display flex
+		align-items center
+		column-gap: 10px
+	&__address
+	&__email
+		display flex
+		align-items start
+		justify-content center
+		flex-wrap wrap
+		flex-direction column
+	&__copyright
+		text-align center
+		padding-top 12px
+		padding-bottom 12px
+
+@media screen and (max-width: 425px)
+	.footer
+		&__info
+			flex-direction column
+		&__socicons
+			padding-bottom 12px
+		&__email
+			margin-top 12px

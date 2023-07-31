@@ -1,0 +1,42 @@
+/*!-----------------------------------------------------------------
+  .pagination - модуль постраничная навигация
+ -----------------------------------------------------------------*/
+.pagination
+	text-align center
+	display flex
+	justify-content center
+	&__lists
+		list-style none
+		display flex
+		padding 0
+		margin 0
+	&__item
+		border 1px solid #ddd
+		border-right 0
+		overflow hidden
+		vertical-align middle
+		&:first-child
+			border-bottom-left-radius: var(--borderRadius)
+			border-top-left-radius: var(--borderRadius)
+		&:last-child
+			border-right 1px solid #ddd
+			border-bottom-right-radius: var(--borderRadius)
+			border-top-right-radius: var(--borderRadius)
+	&__link
+		position: relative
+		display block
+		padding: .5em .75em
+		line-height: 1.1
+		color: #0275d8
+		background-color: #fff
+		text-decoration: none
+		&:hover
+			color: #014c8c
+			background-color: #eceeef
+			text-decoration none
+		&--is-disabled
+			color: #636c72
+			pointer-events: none
+			cursor: not-allowed
+			background-color: #fff
+			border-color: #ddd

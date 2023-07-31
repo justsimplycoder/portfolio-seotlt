@@ -1,0 +1,17 @@
+extends layout.pug
+
+block title
+	title Создание сайтов в Тольятти, продвижение сайтов - web студия SEOTLT
+
+block content
+	section.feedback
+		.feedback__block
+			p.feedback__title Планируете проект?
+			p.feedback__text Давайте сделаем его вместе!
+			p.feedback__contact +7 (8482) 57-08-08 info@seotlt.ru
+			form.feedback__form(action="/bitrix24_api/index.php" method="post" enctype="multipart/form-data")
+				label Представьтесь, пожалуйста&nbsp;*
+				input(type="text" name="TITLE" pattern="[A-Za-zА-Яа-яЁё]{3,}" value="" required="")
+
+
+

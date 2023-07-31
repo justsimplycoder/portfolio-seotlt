@@ -1,0 +1,33 @@
+/*!-----------------------------------------------------------------
+  .callout - модуль выноска
+ -----------------------------------------------------------------*/
+.callout
+	padding: 20px
+	border: 1px solid #eee
+	margin 10px 0
+	border-left-width: 5px
+	border-radius: var(--borderRadius)
+	&__title
+		font-size 20px
+		margin-top: 0
+		margin-bottom: .25em
+	&__text
+		font-size 16px
+		&:last-child
+			margin-bottom: 0
+	&--theme-warning
+		border-color: var(--borderColor)
+		& > ^[0]__title
+			color: var(--borderColor)
+	&--theme-danger
+		border-color: var(--borderColor)
+		& > ^[0]__title
+			color var(--borderColor)
+	&--theme-info
+		border-color: var(--borderColor)
+		& > ^[0]__title
+			color var(--borderColor)
+	&--theme-success
+		border-color: var(--borderColor)
+		& > ^[0]__title
+			color var(--borderColor)
