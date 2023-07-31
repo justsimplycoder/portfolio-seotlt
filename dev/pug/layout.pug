@@ -3,7 +3,8 @@ html(lang="ru")
 	head
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
-		meta(name="description", content="")
+		meta(name="description", content="Уже более 14 лет наша компания предоставляет своим клиентам полный комплекс услуг в области информационных технологий: разработка, продвижение, поддержка и развитие сайтов")
+		meta(name="keywords" content="создание сайтов тольятти, разработка сайтов тольятти, продвижение сайтов, раскрутка сайтов, веб студия, сайты, создать сайт")
 		meta(name="viewport", content="width=device-width,initial-scale=1")
 		link(rel="preconnect" href="https://fonts.gstatic.com")
 		link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet")
@@ -36,26 +37,29 @@ html(lang="ru")
 			.footer__menu
 				nav.menu
 					ul.menu__lists
-						li.menu__item: a(href="/").menu__link Главная
-						li.menu__item: a(href="/doc/").menu__link Документация
-						li.menu__item: a(href="404.html").menu__link 404
+						li.menu__item: a(href="/").menu__link.menu__link--theme-footer Главная
+						li.menu__item: a(href="/doc/").menu__link.menu__link--theme-footer Документация
+						li.menu__item: a(href="404.html").menu__link.menu__link--theme-footer 404
 			.footer__info
 				.footer__contact
 					.footer__title Project manager
-					.footer__phone +7 (8482) 78-36-06
-					.footer__email info@seotlt.ru
+					a(href="tel:+78482783606").footer__phone +7 (8482) 78-36-06
+					a(href="mailto:info@seotlt.ru").footer__email info@seotlt.ru
 				.footer__contact
 					.footer__title Sales manager
-					.footer__phone +7 (8482) 78-36-06
-					.footer__email anna@seotlt.ru
+					a(href="tel:+78482783606").footer__phone +7 (8482) 78-36-06
+					a(href="mailto:anna@seotlt.ru").footer__email anna@seotlt.ru
 				.footer__contact
 					.footer__title Account manager
-					.footer__phone +7 (8482) 78-36-06
-					.footer__email boris@seotlt.ru
+					a(href="tel:+78482783606").footer__phone +7 (8482) 78-36-06
+					a(href="mailto:boris@seotlt.ru").footer__email boris@seotlt.ru
 				.footer__vacancy
+					a(href="#").footer__vacancy-link
+						| Открытые вакансии
+						include ../img/iconsvg/arrow-right.svg
 			.footer__social
-				<a class="vk" href="https://vk.com/seotlt" target="_blank">Вконтакте</a>
-				<a href="https://www.facebook.com/groups/718092454975847/" target="_blank">Facebook</a>
+				a(class="footer__social-link" href="https://vk.com/seotlt" target="_blank") Вконтакте
+				a(class="footer__social-link" href="https://www.facebook.com/groups/718092454975847/" target="_blank") Facebook
 
 		block bottom-script
 			script(src="/js/swiper-bundle.min.js")

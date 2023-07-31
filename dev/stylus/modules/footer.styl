@@ -2,36 +2,73 @@
 	.footer - модуль подвал сайта
  -----------------------------------------------------------------*/
 .footer
-	background-color var(--colorGray)
+	&__menu
+		background-color #2d3f4d
+		padding 80px 8.333% 70px
 	&__info
-		padding-top:15px
-		padding-bottom 15px
+		background-color #2d3f4d
+		color #fff
 		display flex
-		justify-content space-between
-	&__socicons
-		padding 0
-		margin 0
-		list-style none
+		padding 0 8.333%
+	&__contact
+		width 25%
+		display flex
+		flex-direction column
+		padding-bottom 66px
+	&__title
+		color: #688ebf
+		font-family: 'ClearSansRegular', sans-serif
+		font-size: 17px
+	&__phone
+	&__email
+		color #fff
+		margin-top 18px
+		font-size 15px
+		line-height 1.3
+		&:hover
+			color #fff
+			text-decoration none
+	&__phone
+		font-family 'ClearSansBold';
+	&__vacancy
 		display flex
 		align-items center
-		column-gap: 10px
-	&__address
-	&__email
-		display flex
-		align-items start
-		justify-content center
-		flex-wrap wrap
-		flex-direction column
-	&__copyright
-		text-align center
-		padding-top 12px
-		padding-bottom 12px
+	&__vacancy-link
+		text-transform uppercase
+		color #FFF
+		padding-bottom 66px
+		font-weight 700
+		letter-spacing 1px
+		font-size 12px
+		white-space normal
+		&:hover
+			color #fff
+			text-decoration none
+			& > svg
+				margin-left: 12px
+		& > svg
+			margin-bottom: -2px
+			margin-left: 7px
+			width: 13px
+			fill: #fff
+			transition: .3s
 
-@media screen and (max-width: 425px)
-	.footer
-		&__info
-			flex-direction column
-		&__socicons
-			padding-bottom 12px
-		&__email
-			margin-top 12px
+	&__social
+		background-color #253643
+		padding 48px 0
+		text-align center
+	&__social-link
+		font-family 'ClearSansBold';
+		text-transform uppercase
+		color #798e9e
+		font-size 15px
+		& + &
+			margin 0 60px
+		&:hover
+			color: #1a88f9
+			text-decoration none
+
+
+
+
+

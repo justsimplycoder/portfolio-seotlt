@@ -1,51 +1,30 @@
 /*!-----------------------------------------------------------------
 	.page - модуль отвечающий за разметку страницы
  -----------------------------------------------------------------*/
-*
-*:before
-*:after
-	box-sizing border-box
-html
-	scroll-behavior: smooth
-html, body
-	height: 100%
-body
-	display: flex
-	min-height: 100vh
-	// исправление возможного бага с прижатым футером в мобильной версии
-	min-height: -webkit-fill-available
-	flex-direction: column
-
 .page
 	display: flex
 	flex-direction: column
 	min-height: 100vh
-	// исправление возможного бага с прижатым футером в мобильной версии
-	min-height -webkit-fill-available
-	padding-bottom 0
-	&__wrap
-		padding 0 15px
-		max-width: 960px
-		margin: 0 auto
+	padding 0 15px
+	@media screen and (min-width 992px)
+		padding 0 70px
+	@media screen and (min-width 1400px)
+		padding 0 135px
 	&__content
-		padding: 20px 0
 		flex: 1
 	// стрелка наверх
-	&__top-scroll
-		height 50px
-		width 50px
-		position fixed
-		bottom 50px
-		right 50px
-		background #000
-		color #fff
-		text-align center
-		line-height: 51px
-		display flex
-		justify-content center
-		align-items center
-		&:hover
-			color #fff
-	// Страница 404
-	&__404
-		text-align center
+	// &__top-scroll
+	// 	height 50px
+	// 	width 50px
+	// 	position fixed
+	// 	bottom 50px
+	// 	right 50px
+	// 	background #000
+	// 	color #fff
+	// 	text-align center
+	// 	line-height: 51px
+	// 	display flex
+	// 	justify-content center
+	// 	align-items center
+	// 	&:hover
+	// 		color #fff
