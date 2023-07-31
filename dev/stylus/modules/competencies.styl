@@ -1,0 +1,67 @@
+/*!-----------------------------------------------------------------
+	.competencies - модуль секция компетенции
+ -----------------------------------------------------------------*/
+.competencies
+	background: #f8fbff
+	padding: 70px 7%
+	position: relative
+	overflow: hidden
+	&:before
+		content: ''
+		position: absolute
+		top: -300px
+		left: -440px
+		background: url(../img/circle_lg-blue.png) no-repeat
+		width: 820px
+		height: 820px
+	&__title
+		margin: 20px 0
+		position: relative
+		font-size: 60px
+		line-height: 62px
+		padding-bottom 16px
+	&__list
+		display flex
+		flex-wrap wrap
+	&__item
+		width 50%
+		position relative
+		transition .3s
+		padding: 23px 40px 90px 160px
+		position: relative
+		border-radius: 2px
+		overflow hidden
+		&:hover
+			background: #fff
+			border-radius: 8px
+			box-shadow: 0 0 68px rgba(38, 142, 246, 0.12)
+			& > ^[0]__btn
+				opacity 1
+				transform: translateY(-10px)
+	&__img
+		position absolute
+		margin-left -120px
+		margin-top 26px
+	&__name
+		font-family: 'ClearSansBold'
+		font-size: 25px
+		font-weight normal
+		margin-bottom: 0
+	&__desc
+		font-size: 15px
+		line-height: 24px
+		margin-bottom: 27px
+		color: #395971
+	&__price
+		position: absolute
+		display: block
+		font-size: 17px
+		color: #288ff8
+		letter-spacing: 1px
+		& > span
+			font-size: 19px
+	&__btn
+		transform: translateY(100px)
+		position absolute
+		opacity: 0
+		z-index: 1

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 95 84" width="95" height="84" class="svg replaced-svg">
+    <defs>
+        <clipPath id="_clipPath_kCLJasWDcplatIUVCYENkCICBzm03NpE">
+            <rect width="95" height="84"></rect>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#_clipPath_kCLJasWDcplatIUVCYENkCICBzm03NpE)">
+        <rect width="95" height="84" style="fill:rgb(200,200,200)" fill-opacity="0"></rect>
+        <path class="svgAnimate iconSet02Line1" d=" M 35.197 31.359 L 35.934 30.686 L 37.281 32.162 L 36.542 32.837 L 22.13 45.977 L 21.391 46.65 L 20.045 45.174 L 20.782 44.499 L 35.197 31.359 Z " fill="rgb(70,70,70)"></path>
+        <path class="svgAnimate iconSet02Line3" d=" M 73.079 21.95 L 73.727 21.191 L 75.248 22.487 L 74.599 23.246 L 59.49 40.959 L 58.842 41.718 L 57.324 40.422 L 57.972 39.663 L 73.079 21.95 Z " fill="rgb(70,70,70)"></path>
+        <path class="svgAnimate iconSet02Line2" d=" M 38.111 32.116 L 37.205 31.694 L 38.049 29.883 L 38.954 30.305 L 58.043 39.183 L 58.949 39.605 L 58.105 41.416 L 57.2 40.994 L 38.111 32.116 Z " fill="rgb(70,70,70)"></path>
+        <path d=" M 1.984 2 L 93.016 2 C 93.542 2 94.048 2.209 94.418 2.582 C 94.791 2.952 95 3.458 95 3.984 L 95 67.936 C 95 68.462 94.791 68.968 94.418 69.339 C 94.048 69.712 93.542 69.921 93.016 69.921 L 1.984 69.921 C 1.458 69.921 0.952 69.712 0.582 69.339 C 0.209 68.968 0 68.462 0 67.936 L 0 3.984 C 0 3.458 0.209 2.952 0.582 2.582 C 0.952 2.209 1.458 2 1.984 2 Z  M 92.336 67.257 L 2.664 67.257 L 2.664 4.664 L 92.336 4.664 L 92.336 67.257 Z " fill-rule="evenodd" fill="rgb(70,70,70)"></path>
+        <path d=" M 8.25 8.437 L 86.75 8.437 C 87.231 8.437 87.693 8.628 88.033 8.967 C 88.372 9.307 88.563 9.769 88.563 10.25 L 88.563 57.453 C 88.563 57.935 88.372 58.396 88.033 58.736 C 87.693 59.075 87.231 59.266 86.75 59.266 L 8.25 59.266 C 7.769 59.266 7.307 59.075 6.967 58.736 C 6.628 58.396 6.437 57.935 6.437 57.453 L 6.437 10.25 C 6.437 9.769 6.628 9.307 6.967 8.967 C 7.307 8.628 7.769 8.437 8.25 8.437 Z  M 85.9 56.603 L 9.1 56.603 L 9.1 11.1 L 85.9 11.1 L 85.9 56.603 Z " fill-rule="evenodd" fill="rgb(70,70,70)"></path>
+        <path d=" M 26.025 81.907 L 26.025 83.238 L 23.362 83.238 L 23.362 81.907 L 23.362 73.028 L 71.638 73.028 L 71.638 81.907 L 71.638 83.238 L 68.975 83.238 L 68.975 81.907 L 68.975 75.692 L 26.025 75.692 L 26.025 81.907 Z " fill="rgb(70,70,70)"></path>
+        <circle class="svgAnimate iconSet02Scale1" vector-effect="non-scaling-stroke" cx="20.75350467289715" cy="46.281542056074755" r="4.106308411214954" fill="rgb(50,148,246)"></circle>
+        <circle class="svgAnimate iconSet02Scale2" vector-effect="non-scaling-stroke" cx="37.62266355140187" cy="30.96612149532713" r="4.106308411214954" fill="rgb(50,148,246)"></circle>
+        <circle class="svgAnimate iconSet02Scale3" vector-effect="non-scaling-stroke" cx="58.48714953271025" cy="40.73247663551398" r="4.106308411214947" fill="rgb(50,148,246)"></circle>
+        <circle class="svgAnimate iconSet02Scale4" vector-effect="non-scaling-stroke" cx="74.634929906542" cy="22.087616822429855" r="4.10630841121494" fill="rgb(50,148,246)"></circle>
+    </g>
+</svg>
