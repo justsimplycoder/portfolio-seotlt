@@ -1,23 +1,24 @@
 /*!-----------------------------------------------------------------
-  .btn - модуль кнопки
+	.btn - модуль кнопки
  -----------------------------------------------------------------*/
 .btn
+	display inline-block
+	letter-spacing: 2.5px
+	text-transform: uppercase
+	text-decoration: none
+	line-height: 55px
+	font-size: 13px
+	font-weight: 700
+	padding-left: 35px
+	padding-right: 35px
+	transition: .3s
 	cursor: pointer
-	border-radius var(--borderRadius)
-	text-decoration none
-	display: inline-block
-	font-weight: normal
-	text-align: center
 	white-space: nowrap
-	user-select: none
-	border: 1px solid transparent
-	padding 8px 12px
-	font-size: 16px
-	line-height: 1.25
-	transition: all 0.2s ease-in-out
-	color: var(--colorBlack)
-	background-color var(--colorGray)
-
+	height: 55px
+	border-radius: 30px
+	border: 0
+	&:hover
+		box-shadow: none
 	&--disabled
 	&[disabled]
 		opacity .65
@@ -28,3 +29,26 @@
 	&:focus, &:hover
 		text-decoration: none
 		color: var(--colorBlack)
+	&--theme-blue
+		background: #2a90f6
+		color: #fff
+		box-shadow: 0 8px 16px rgba(13, 113, 211, 0.25)
+		&:hover
+			color: #fff
+			background: #107ded
+	&--theme-white
+		background: #fff
+		color: #2a90f6
+		box-shadow: 0 8px 16px rgba(13, 113, 211, 0.15)
+		&:hover
+			color: #2a90f6
+			background: #e4f1ff
+
+	& > svg
+		margin-bottom: -1px
+		margin-right 6px
+		fill #fff
+		size 12px
+		transition .3s
+	&:hover > svg
+		margin-bottom -4px

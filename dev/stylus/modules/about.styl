@@ -1,0 +1,41 @@
+/*!-----------------------------------------------------------------
+	.about - модуль секция о компании
+ -----------------------------------------------------------------*/
+.about
+	display flex
+	background-color #eff7ff
+	align-items: stretch
+	overflow hidden
+	position relative
+	&:before
+		content: ''
+		position: absolute
+		right: -460px
+		bottom: -260px
+		background: url(../img/circle_blue.png) no-repeat
+		width: 820px
+		height: 820px
+	&__show
+		width 50%
+		// height: auto
+		background: url(../img/about_bg.jpg) no-repeat
+		background-position: center
+		background-size: cover
+		position: relative
+	&__info
+		width 50%
+		padding 70px
+		padding-top 20px
+		position relative
+	&__title
+		font-size: 30px
+		line-height: 36px
+		margin-bottom: 40px
+		> span
+			color #268ef6
+	&__text
+		font-size: 18px
+		line-height: 30px
+		margin-bottom: 60px
+	&__btn
+		margin-right 5%
