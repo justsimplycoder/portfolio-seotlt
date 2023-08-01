@@ -54,6 +54,46 @@ block content
 				.competencies__price от 150 000 р.
 				a(href="#").competencies__btn.btn.btn--theme-white Узнать больше
 
+	section.review
+		.review__title О нас говорят
+		.swiper.review__wrap
+			.swiper-wrapper
+				.swiper-slide
+					.review__slide
+						.review__img: img(src="/img/review-01.jpg")
+						.review__body
+							.review__text Молодой, энергичный и созидательный коллектив Seotlt помог нашей компании увидеть новые перспективы развития и формы продвижения. Надеемся на дальнейшее взаимовыгодное партнерство!
+							.review__autor Михаил Липин, Директор сети пиццерий «Папа Пекарь»
+							.review__info
+								.review__btn.btn.btn--theme-blue
+									include ../img/iconsvg/arrow-down.svg
+									| СКАЧАТЬ ОРИГИНАЛ
+								img(src="/img/papapekar.png").review__logo
+				.swiper-slide.review__slide
+					.review__img: img(src="/img/review-02.jpg")
+					.review__body
+						.review__text Группа компаний "Тольятти Телеком" выражает благодарность коллективу компании Seotlt за профессионализм в подготовке и реализации проекта по созданию сайта www.totel.ru. Работа была завершена в срок, с высокой ответственностью, учтены все пожелания заказчика.
+						.review__autor Владимир Тихонов, Генеральный директор "Тольятти Телеком"
+						.review__info
+							.review__btn.btn.btn--theme-blue
+								include ../img/iconsvg/arrow-down.svg
+								| СКАЧАТЬ ОРИГИНАЛ
+							img(src="/img/totel.png").review__logo
+				.swiper-slide.review__slide
+					.review__img: img(src="/img/review-03.jpg")
+					.review__body
+						.review__text Удобство работы с командой SEOTLT обуславливается тем, что специалисты, работающие над проектом, вникают в суть технического задания, непосредственно, на территории нашей компании, на "живых" примерах.
+						.review__autor Дмитрий Мандычев, Директор компании "Манро Механика"
+						.review__info
+							.review__btn.btn.btn--theme-blue
+								include ../img/iconsvg/arrow-down.svg
+								| СКАЧАТЬ ОРИГИНАЛ
+							img(src="/img/manro.jpg").review__logo
+		.review__navigation
+			.review__btn-prev: include ../img/iconsvg/arrow-prev.svg
+			.review__pagination
+			.review__btn-next: include ../img/iconsvg/arrow-next.svg
+
 	section.clients
 		h3.clients__title ЗА 14 ЛЕТ РАБОТЫ У НАС БЫЛО <span>БОЛЕЕ 300 КЛИЕНТОВ</span>
 		.clients__list
@@ -71,6 +111,7 @@ block content
 			form.feedback__form(action="/bitrix24_api/index.php" method="post" enctype="multipart/form-data")
 				label Представьтесь, пожалуйста&nbsp;*
 				input(type="text" name="TITLE" pattern="[A-Za-zА-Яа-яЁё]{3,}" value="" required="")
+
 
 
 

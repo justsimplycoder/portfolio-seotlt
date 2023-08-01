@@ -26,6 +26,11 @@ tippy('.tooltip-info', {
 		alertClose.forEach(alertHandler);
 	}
 
+	function numberEl(index) {
+		if(index < 10) return '0' + (index + 1);
+		return index + 1;
+	}
+
 	// Слайдер
 	const swiper = new Swiper('.swiper', {
 		// Optional parameters
@@ -34,18 +39,17 @@ tippy('.tooltip-info', {
 
 		// If we need pagination
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.review__pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + numberEl(index) + '</span>';
+			},
 		},
 
 		// Navigation arrows
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.review__btn-next',
+			prevEl: '.review__btn-prev',
 		},
-
-		// And if we need scrollbar
-		// scrollbar: {
-		//   el: '.swiper-scrollbar',
-		// },
 	});
 })();
