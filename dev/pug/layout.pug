@@ -22,14 +22,31 @@ html(lang="ru")
 
 	body.page
 		header.header
+			a.header__logo(href="/"): include ../img/iconsvg/seotlt_logo.svg
 			.header__menu
-				.page__wrap
-					nav.menu
-						.hamburger: .hamburger__line
-						ul.menu__lists
-							li.menu__item: a(href="/").menu__link Главная
-							li.menu__item: a(href="/doc/").menu__link Документация
-							li.menu__item: a(href="404.html").menu__link 404
+				nav.menu
+					ul.menu__lists
+						li.menu__item: a(href="#").menu__link Портфоли
+						li.menu__item: a(href="#").menu__link Услуги
+						li.menu__item: a(href="#").menu__link Студия
+						li.menu__item: a(href="#").menu__link Контакты
+			.header__mobile-menu.mobile-menu
+				a(href="tel:+78482783606").mobile-menu__phone +7 (8482) 78-36-06
+				.hamburger.mobile-menu__hamburger: .hamburger__line
+				nav: ul.mobile-menu__lists
+					li.mobile-menu__item: a(href="#").mobile-menu__link Главная
+					li.mobile-menu__item: a(href="#").mobile-menu__link Портфоли
+					li.mobile-menu__item: a(href="#").mobile-menu__link Услуги
+						ul.menu-services
+							li.menu-services__item: a(href="#").menu-services__link Разработка сайтов и сервисов
+							li.menu-services__item: a(href="#").menu-services__link Комплексный маркетинг
+							li.menu-services__item: a(href="#").menu-services__link E-commerce решения
+							li.menu-services__item: a(href="#").menu-services__link Графический и веб-дизайн
+							li.menu-services__item: a(href="#").menu-services__link Мобильные приложения
+							li.menu-services__item: a(href="#").menu-services__link Бизнес-сервисы
+					li.mobile-menu__item: a(href="#").mobile-menu__link Студия
+					li.mobile-menu__item: a(href="#").mobile-menu__link Контакты
+				p.mobile-menu__copyright © 2009 - 2023 SEOTLT
 
 		.page__content
 			.page__wrap
