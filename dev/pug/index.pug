@@ -4,7 +4,30 @@ block title
 	title Создание сайтов в Тольятти, продвижение сайтов - web студия SEOTLT
 
 block content
-	section.about
+	section.services
+		.swiper#swiper-services
+			.swiper-wrapper
+				.swiper-slide.services__slide
+					.services__wrap.services__wrap--theme-business
+						.services__info
+							h1.services__title Проектирование, <br>дизайн и <br>разработка
+							h2.services__text Сайтов, мобильных приложений и <br>техническая поддержка интернет <br>проектов.
+				.swiper-slide.services__slide
+					.services__wrap.services__wrap--theme-marketing
+						.services__info
+							h1.services__title Комплексный <br>маркетинг
+							h2.services__text Увеличиваем посещаемость ресурса, <br>количество заявок и продажи, повышаем <br>узнаваемость бренда винтернете.
+				.swiper-slide.services__slide
+					.services__wrap.services__wrap--theme-projects
+						.services__info
+							h1.services__title Сложные <br>веб-проекты
+							h2.services__text Внедряем эффективные решения <br>для ведения бизнеса онлайн.
+		.services__navigation
+			.services__btn-prev: include ../img/iconsvg/arrow-services-prev.svg
+			.services__pagination
+			.services__btn-next: include ../img/iconsvg/arrow-services-next.svg
+
+	section.about.page__wrap
 		.about__show
 		.about__info
 			h2.about__title Мы digital студия, которая <span>создает и развивает интернет-проекты</span> любой сложности, проявляет себя в интересных дизайн-решениях.
@@ -14,7 +37,7 @@ block content
 				include ../img/iconsvg/arrow-down.svg
 				| Презентация
 
-	section.competencies
+	section.competencies.page__wrap
 		h1.competencies__title Компетенции
 		.competencies__list
 			.competencies__item
@@ -48,13 +71,13 @@ block content
 				.competencies__price от 150 000 р.
 				a(href="#").competencies__btn.btn.btn--theme-white Узнать больше
 			.competencies__item
-				.competencies__img: include ../img/iconsvg/mobile.svg
+				.competencies__img: include ../img/iconsvg/business.svg
 				h2.competencies__name Бизнес-сервисы
 				p.competencies__desc Индивидуальные решения под задачи Вашего бизнеса.
 				.competencies__price от 150 000 р.
 				a(href="#").competencies__btn.btn.btn--theme-white Узнать больше
 
-	section.portfolio
+	//- section.portfolio
 		.portfolio__item.portfolio__item--theme-papa-pekar
 			.portfolio__info.portfolio__info--theme-papa-pekar
 				h2.portfolio__title Папа Пекарь<br> доставка пиццы<br> интернет-магазин
@@ -68,21 +91,20 @@ block content
 				h2.portfolio__title Тольятти Телеком<br> корпоративный<br> сайт
 				.portfolio__btn.btn.btn--theme-white узнать больше
 
-	section.review
+	section.review.page__wrap
 		.review__title О нас говорят
-		.swiper.review__wrap
+		.swiper.review__wrap#swiper-review
 			.swiper-wrapper
-				.swiper-slide
-					.review__slide
-						.review__img: img(src="/img/review-01.jpg")
-						.review__body
-							.review__text Молодой, энергичный и созидательный коллектив Seotlt помог нашей компании увидеть новые перспективы развития и формы продвижения. Надеемся на дальнейшее взаимовыгодное партнерство!
-							.review__autor Михаил Липин, Директор сети пиццерий «Папа Пекарь»
-							.review__info
-								.review__btn.btn.btn--theme-blue
-									include ../img/iconsvg/arrow-down.svg
-									| СКАЧАТЬ ОРИГИНАЛ
-								img(src="/img/papapekar.png").review__logo
+				.swiper-slide.review__slide
+					.review__img: img(src="/img/review-01.jpg")
+					.review__body
+						.review__text Молодой, энергичный и созидательный коллектив Seotlt помог нашей компании увидеть новые перспективы развития и формы продвижения. Надеемся на дальнейшее взаимовыгодное партнерство!
+						.review__autor Михаил Липин, Директор сети пиццерий «Папа Пекарь»
+						.review__info
+							.review__btn.btn.btn--theme-blue
+								include ../img/iconsvg/arrow-down.svg
+								| СКАЧАТЬ ОРИГИНАЛ
+							img(src="/img/papapekar.png").review__logo
 				.swiper-slide.review__slide
 					.review__img: img(src="/img/review-02.jpg")
 					.review__body
@@ -108,7 +130,7 @@ block content
 			.review__pagination
 			.review__btn-next: include ../img/iconsvg/arrow-next.svg
 
-	section.clients
+	section.clients.page__wrap
 		h3.clients__title ЗА 14 ЛЕТ РАБОТЫ У НАС БЫЛО <span>БОЛЕЕ 300 КЛИЕНТОВ</span>
 		.clients__list
 			img(src="/img/totel.png").clients__item
@@ -117,7 +139,7 @@ block content
 			img(src="/img/administration.png").clients__item
 			img(src="/img/aldis.png").clients__item
 
-	section.feedback
+	section.feedback.page__wrap
 		.feedback__block
 			p.feedback__title Планируете проект?
 			p.feedback__text Давайте сделаем его вместе!
