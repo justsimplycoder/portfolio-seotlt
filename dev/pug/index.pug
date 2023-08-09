@@ -33,7 +33,7 @@ block content
 			h2.about__title Мы digital студия, которая <span>создает и развивает интернет-проекты</span> любой сложности, проявляет себя в интересных дизайн-решениях.
 			p.about__text Мы одинаково хорошо справляемся с серьезными интеграциями, комплексными разработками, нетиповым функционалом для e-commerce и созданием креативных, нестандартных концепций для лэндингов и корпоративных сайтов. Мы помогаем легко воплотить самые смелые идеи.
 			a.about__btn.btn.btn--theme-white Узнать больше
-			a.about__btn.btn.btn--theme-blue
+			a.about__btn.btn.btn--theme-blue.btn--right-arrow
 				include ../img/iconsvg/arrow-down.svg
 				| Презентация
 
@@ -101,7 +101,7 @@ block content
 						.review__text Молодой, энергичный и созидательный коллектив Seotlt помог нашей компании увидеть новые перспективы развития и формы продвижения. Надеемся на дальнейшее взаимовыгодное партнерство!
 						.review__autor Михаил Липин, Директор сети пиццерий «Папа Пекарь»
 						.review__info
-							.review__btn.btn.btn--theme-blue
+							.review__btn.btn.btn--theme-blue.btn--left-arrow
 								include ../img/iconsvg/arrow-down.svg
 								| СКАЧАТЬ ОРИГИНАЛ
 							img(src="/img/papapekar.png").review__logo
@@ -111,7 +111,7 @@ block content
 						.review__text Группа компаний "Тольятти Телеком" выражает благодарность коллективу компании Seotlt за профессионализм в подготовке и реализации проекта по созданию сайта www.totel.ru. Работа была завершена в срок, с высокой ответственностью, учтены все пожелания заказчика.
 						.review__autor Владимир Тихонов, Генеральный директор "Тольятти Телеком"
 						.review__info
-							.review__btn.btn.btn--theme-blue
+							.review__btn.btn.btn--theme-blue.btn--left-arrow
 								include ../img/iconsvg/arrow-down.svg
 								| СКАЧАТЬ ОРИГИНАЛ
 							img(src="/img/totel.png").review__logo
@@ -121,7 +121,7 @@ block content
 						.review__text Удобство работы с командой SEOTLT обуславливается тем, что специалисты, работающие над проектом, вникают в суть технического задания, непосредственно, на территории нашей компании, на "живых" примерах.
 						.review__autor Дмитрий Мандычев, Директор компании "Манро Механика"
 						.review__info
-							.review__btn.btn.btn--theme-blue
+							.review__btn.btn.btn--theme-blue.btn--left-arrow
 								include ../img/iconsvg/arrow-down.svg
 								| СКАЧАТЬ ОРИГИНАЛ
 							img(src="/img/manro.jpg").review__logo
@@ -140,13 +140,44 @@ block content
 			img(src="/img/aldis.png").clients__item
 
 	section.feedback.page__wrap
+		.feedback__img
 		.feedback__block
-			p.feedback__title Планируете проект?
-			p.feedback__text Давайте сделаем его вместе!
-			p.feedback__contact +7 (8482) 57-08-08 info@seotlt.ru
-			form.feedback__form(action="/bitrix24_api/index.php" method="post" enctype="multipart/form-data")
-				label Представьтесь, пожалуйста&nbsp;*
-				input(type="text" name="TITLE" pattern="[A-Za-zА-Яа-яЁё]{3,}" value="" required="")
+			.feedback__body
+				p.feedback__title Планируете <br>проект?
+				p.feedback__text Давайте сделаем его вместе!
+				p.feedback__contact
+					a(href="#").feedback__link +7 (8482) 57-08-08
+					a(href="#").feedback__link info@seotlt.ru
+				form.feedback__form.form(action="" method="post" enctype="multipart/form-data")
+					.form__group.form__group--w-full
+						input(type="text" pattern="[A-Za-zА-Яа-яЁё]{3,}" value="" name="TITLE" required).form__input.form__input--w-full#form-title
+						label.form__label(for="form-title") Представьтесь, пожалуйста&nbsp;*
+					.form__group.form__group--w-6-12
+						input(type="text" value="" name="PHONE" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required).form__input#form-phone
+						label.form__label(for="form-phone") Телефон&nbsp;*
+					.form__group.form__group--w-6-12
+						input(type="email" value="").form__input#form-email
+						label.form__label(for="form-email") E-mail
+					.form__group.form__group--w-6-12
+						input(type="hidden" title="COMMENTS" name="COMMENTS" value="Заявка с главной страницы")
+						label.form__file(for="form-file")
+							include ../img/iconsvg/file.svg
+							| Прикрепить файл
+						input(type="file" name="BRIEF" id="form-file").form__input
+					.form__group.form__group--w-6-12.form__group--start-right
+						button(type="submit").btn.btn--theme-blue.btn--right-arrow
+							| Отправить
+							include ../img/iconsvg/arrow-next.svg
+					.form__group.form__group--w-full
+						label.form__consent.switch(for="form__consent")
+							input(type="checkbox" checked required)#form__consent
+							.switch__checkbox
+							|	Даю согласие на обработку &nbsp;<a href="#">персональных данных</a>
+			.feedback__footer
+				a.about__btn.btn.btn--theme-white.btn--left-arrow
+					include ../img/iconsvg/arrow-down.svg
+					| Бриф
+				p.feedback__text-brif —&nbsp;&nbsp;заполните и прикрепите к письму
 
 
 

@@ -56,9 +56,10 @@ html(lang="ru")
 			.footer__menu
 				nav.menu
 					ul.menu__lists
-						li.menu__item: a(href="/").menu__link.menu__link--theme-footer Главная
-						li.menu__item: a(href="/doc/").menu__link.menu__link--theme-footer Документация
-						li.menu__item: a(href="404.html").menu__link.menu__link--theme-footer 404
+						li.menu__item: a(href="#").menu__link.menu__link--theme-footer Портфолио
+						li.menu__item: a(href="#").menu__link.menu__link--theme-footer Услуги
+						li.menu__item: a(href="#").menu__link.menu__link--theme-footer Студия
+						li.menu__item: a(href="#").menu__link.menu__link--theme-footer Контакты
 			.footer__info
 				.footer__contact
 					.footer__title Project manager
@@ -82,6 +83,7 @@ html(lang="ru")
 
 		block bottom-script
 			script(src="/js/swiper-bundle.min.js")
+			script(src="https://unpkg.com/imask")
 			// build:js_bottom
 			script(src="/js/script.js", type="module")
 			// endbuild

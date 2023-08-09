@@ -42,7 +42,19 @@ const swiper2 = new Swiper('#swiper-services', {
 	},
 });
 
-swiper2.navigationNext = (swiper) => {
-	console.log('sdf');
-}
-console.log(swiper2.nextEl);
+const feedbackFormInputs = document.querySelectorAll('.feedback__form .form__input');
+feedbackFormInputs.forEach(input => {
+	input.addEventListener('blur', event => {
+		let value = event.target.value;
+		if(value !== '') event.target.classList.add('form__input--focus');
+		else event.target.classList.remove('form__input--focus');
+	});
+});
+
+IMask(
+	document.getElementById('form-phone'),
+	{
+		mask: '+{7}(000) 000-00-00',
+		lazy: false
+	}
+)

@@ -1,0 +1,71 @@
+/*!-----------------------------------------------------------------
+	.feedback - модуль секция для связи
+ -----------------------------------------------------------------*/
+.feedback
+	padding: 115px 10% 100px
+	background-color #84c5ff
+	position: relative
+	overflow: hidden
+	&:before
+	&:after
+		content ''
+		border-radius: 50%
+		border 200px solid #6abafb
+		width: 820px
+		height: 820px
+		display block
+		position absolute
+	&:before
+		top: -420px
+		left: -400px
+	&:after
+		bottom: -440px
+		right: -410px
+	&__img
+		background-image: url(../img/feedback-bg.png)
+		background-repeat: no-repeat
+		background-position bottom left
+		background-size contain
+		left 5%
+		position absolute
+		bottom 0
+		width 100%
+		height 95%
+	&__block
+		position relative
+		z-index 1
+		width 57%
+		min-height: 456px
+		border-radius: 3px
+		right: -45%
+		background-color #FFF
+		~/__body
+			padding: 70px 10%
+			~/__title
+				margin: 0 0 20px
+				font-size: 60px
+				line-height: 62px
+				font-weight bold
+			~/__text
+				font-size: 28px
+				margin: 0
+				line-height: 1.2
+				font-weight bold
+			~/__contact
+				margin 5px 0
+				~/__link
+					font-size: 20px
+					text-decoration: none
+					color: #36434d
+					& + &
+						margin-left 5%
+		~/__footer
+			padding: 0 10%
+			height 95px
+			display flex
+			align-items center
+			background-color #f0f7ff
+			color: #7093c0
+		~/__text-brif
+			position relative
+			left -15px

@@ -36,6 +36,8 @@
 		&:hover
 			color: #fff
 			background: #107ded
+		& > svg
+			fill #fff
 	&--theme-white
 		background: #fff
 		color: #2a90f6
@@ -43,12 +45,21 @@
 		&:hover
 			color: #2a90f6
 			background: #e4f1ff
-
-	& > svg
+		& > svg
+			fill #2a90f6
+	&--left-arrow > svg
 		margin-bottom: -1px
 		margin-right 6px
-		fill #fff
 		size 12px
 		transition .3s
-	&:hover > svg
+	&--left-arrow:hover > svg
 		margin-bottom -4px
+	&--right-arrow > svg
+		margin-bottom: -1px
+		margin-left 6px
+		position relative
+		left 0
+		size 12px
+		transition .3s
+	&--right-arrow:hover > svg
+		left 4px
