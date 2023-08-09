@@ -2,32 +2,15 @@ import menu from './modules/menu.js'
 
 menu();
 
+
+// Слайдеры
 function numberEl(index) {
 	if(index < 10) return '0' + (index + 1);
 	return index + 1;
 }
-
-// Слайдер
-const swiper1 = new Swiper('#swiper-review', {
+// секция services
+new Swiper('#swiper-services', {
 	direction: 'horizontal',
-	loop: true,
-	pagination: {
-		el: '.review__pagination',
-		clickable: true,
-		renderBullet: function (index, className) {
-			return '<span class="' + className + '">' + numberEl(index) + '</span>';
-		},
-	},
-	navigation: {
-		nextEl: '.review__btn-next',
-		prevEl: '.review__btn-prev',
-	},
-	// effect: 'fade'
-});
-
-const swiper2 = new Swiper('#swiper-services', {
-	direction: 'horizontal',
-	// loop: true,
 	pagination: {
 		el: '.services__pagination',
 		clickable: true,
@@ -41,7 +24,27 @@ const swiper2 = new Swiper('#swiper-services', {
 		prevEl: '.services__btn-prev',
 	},
 });
+// секция review
+new Swiper('#swiper-review', {
+	direction: 'horizontal',
+	loop: true,
+	pagination: {
+		el: '.review__pagination',
+		clickable: true,
+		renderBullet: function (index, className) {
+			return '<span class="' + className + '">' + numberEl(index) + '</span>';
+		},
+	},
+	navigation: {
+		nextEl: '.review__btn-next',
+		prevEl: '.review__btn-prev',
+	},
+	effect: 'fade',
+	speed: 600
+});
 
+
+// секция feedback
 const feedbackFormInputs = document.querySelectorAll('.feedback__form .form__input');
 feedbackFormInputs.forEach(input => {
 	input.addEventListener('blur', event => {
@@ -50,7 +53,7 @@ feedbackFormInputs.forEach(input => {
 		else event.target.classList.remove('form__input--focus');
 	});
 });
-
+// маска для ввода телефона
 IMask(
 	document.getElementById('form-phone'),
 	{
