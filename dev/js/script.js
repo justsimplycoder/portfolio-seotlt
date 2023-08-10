@@ -1,7 +1,16 @@
-import menu from './modules/menu.js'
-
-menu();
-
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.mobile-menu__nav');
+const wrap = document.querySelector('.mobile-menu__wrap');
+hamburger.addEventListener('click', event => {
+	nav.classList.toggle('mobile-menu__nav--is-show');
+	wrap.classList.toggle('mobile-menu__wrap--is-show');
+	hamburger.classList.toggle('hamburger--is-active');
+});
+wrap.addEventListener('click', event => {
+	nav.classList.toggle('mobile-menu__nav--is-show');
+	wrap.classList.toggle('mobile-menu__wrap--is-show');
+	hamburger.classList.toggle('hamburger--is-active');
+});
 
 // Слайдеры
 function numberEl(index) {

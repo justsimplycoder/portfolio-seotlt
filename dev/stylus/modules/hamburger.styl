@@ -2,48 +2,48 @@
   .hamburger - модуль показа меню на маленьких экранах
  -----------------------------------------------------------------*/
 .hamburger
-	height 25px
-	width 26px
+	height 35px
+	width 35px
 	cursor pointer
-	display none
-	position fixed
-	right 15px
-	top 4px
-	z-index 2
 	transition-duration: 0.5s
+	position relative
+	margin-left 50px
 	&__line
 		transition-duration: 0.5s
 		position: absolute
 		height: 3px
-		width: 26px
-		top: 10px
-		background-color: #fff
+		width: 35px
+		top: 16px
+		background-color: #191919
+		border-radius: 3px
 		&:before
 			transition-duration: 0.5s
 			position: absolute
-			width: 26px
+			width: 60%
 			height: 3px
-			background-color: #fff
+			background-color: #191919
 			content: ""
-			top: -10px
+			top: -9px
+			border-radius: 3px
 		&:after
 			transition-duration: 0.5s
 			position: absolute
-			width: 26px
+			width: 60%
 			height: 3px
-			background-color: #fff
+			background-color: #191919
 			content: ""
-			top: 10px
+			top: 9px
+			border-radius: 3px
 	&--is-active
 		.hamburger__line
 			transition-duration: 0.5s
 			background: transparent
 			&:before
-				transform: rotateZ(45deg) scaleX(1.35) translate(6px, 6px)
+				width 35px
+				transform: rotateZ(45deg) translate(7px, 7px)
 			&:after
-				transform: rotateZ(-45deg) scaleX(1.35) translate(6px, -6px)
+				width 35px
+				transform: rotateZ(-45deg) translate(6px, -6px)
 
 // Adaptive
-@media screen and (max-width: 425px)
-	.hamburger
-		display block
+// @media screen and (max-width: 425px)

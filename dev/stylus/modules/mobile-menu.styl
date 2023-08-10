@@ -1,0 +1,85 @@
+/*!-----------------------------------------------------------------
+	.mobile-menu - модуль секция мобильное меню
+ -----------------------------------------------------------------*/
+.mobile-menu
+	--width-menu: 470px
+	width calc(var(--width-menu) - 135px)
+	&__top
+		width calc(var(--width-menu) - 135px - 75px)
+		display flex
+		align-items center
+		justify-content space-between
+		height 100px
+		~/__phone
+			font-family: 'Roboto', sans-serif
+			font-weight: 500
+			text-decoration: none
+			font-size: 18px
+			letter-spacing: 0.5px
+			white-space: nowrap
+			border-bottom: 1px dotted rgba(38, 142, 246, 0.5)
+	// &__hamburger
+	&__wrap
+		position fixed
+		width calc(100% - var(--width-menu))
+		height 100vh
+		left 0
+		top 0
+		background-color rgba(126, 190, 254, 0.5)
+		display none
+		&--is-show
+			display block
+	~/__nav
+		right 0
+		top 0
+		position absolute
+		background-color #FFF
+		width var(--width-menu)
+		padding-left: 75px
+		height 100px
+		overflow hidden
+		display block
+		&--is-show
+			height 100vh
+			display flex
+			flex-direction column
+		~/__lists
+			font-size: 35px
+			list-style none
+			padding 0
+			flex 1
+			~/__item
+				line-height 1.8
+				font-weight 700
+				~/__link
+					color: #3d484f
+					text-decoration none
+					transition .3s
+				~/__services
+					font-size: 20px
+					list-style none
+					padding 0
+					font-weight 400
+					~/__services-item
+						margin-bottom .3em
+						~/__services-link
+							color: #3d484f
+							text-decoration none
+							transition .3s
+			~/__copyright
+				padding-bottom: 50px
+				font-size: 14px
+				transition .3s
+				// position absolute
+				// bottom 0
+	// &__phone
+	// &__hamburger
+	// 	~/__item
+	// 		~/__link
+	// 		// ul.menu-services
+	// 		// 	li.menu-services__item: a(href="#").menu-services__link Разработка сайтов и сервисов
+	// 		// 	li.menu-services__item: a(href="#").menu-services__link Комплексный маркетинг
+	// 		// 	li.menu-services__item: a(href="#").menu-services__link E-commerce решения
+	// 		// 	li.menu-services__item: a(href="#").menu-services__link Графический и веб-дизайн
+	// 		// 	li.menu-services__item: a(href="#").menu-services__link Мобильные приложения
+	// 		// 	li.menu-services__item: a(href="#").menu-services__link Бизнес-сервисы

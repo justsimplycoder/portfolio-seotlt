@@ -8,7 +8,7 @@ html(lang="ru")
 		meta(name="viewport", content="width=device-width,initial-scale=1")
 		link(rel="preconnect" href="https://fonts.googleapis.com")
 		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-		link(href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Roboto:wght@500&display=swap" rel="stylesheet")
 		link(rel="stylesheet", href="/css/swiper-bundle.min.css")
 
 		// build:css
@@ -21,8 +21,8 @@ html(lang="ru")
 		block top-script
 
 	body.page
-		header.header
-			.page__wrap
+		header.page__header.header
+			.page__wrap.header__wrap
 				a.header__logo(href="/"): include ../img/iconsvg/seotlt_logo.svg
 				.header__menu
 					nav.menu
@@ -32,34 +32,43 @@ html(lang="ru")
 							li.menu__item: a(href="#").menu__link Студия
 							li.menu__item: a(href="#").menu__link Контакты
 				.header__mobile-menu.mobile-menu
-					a(href="tel:+78482783606").mobile-menu__phone +7 (8482) 78-36-06
-					.hamburger.mobile-menu__hamburger: .hamburger__line
-					nav: ul.mobile-menu__lists
-						li.mobile-menu__item: a(href="#").mobile-menu__link Главная
-						li.mobile-menu__item: a(href="#").mobile-menu__link Портфоли
-						li.mobile-menu__item: a(href="#").mobile-menu__link Услуги
-							ul.menu-services
-								li.menu-services__item: a(href="#").menu-services__link Разработка сайтов и сервисов
-								li.menu-services__item: a(href="#").menu-services__link Комплексный маркетинг
-								li.menu-services__item: a(href="#").menu-services__link E-commerce решения
-								li.menu-services__item: a(href="#").menu-services__link Графический и веб-дизайн
-								li.menu-services__item: a(href="#").menu-services__link Мобильные приложения
-								li.menu-services__item: a(href="#").menu-services__link Бизнес-сервисы
-						li.mobile-menu__item: a(href="#").mobile-menu__link Студия
-						li.mobile-menu__item: a(href="#").mobile-menu__link Контакты
-					p.mobile-menu__copyright © 2009 - 2023 SEOTLT
+					.mobile-menu__wrap
+					.mobile-menu__nav
+						.mobile-menu__top
+							a(href="tel:+78482783606").mobile-menu__phone +7 (8482) 78-36-06
+							.hamburger.mobile-menu__hamburger: .hamburger__line
+						ul.mobile-menu__lists
+							li.mobile-menu__item: a(href="#").mobile-menu__link Главная
+							li.mobile-menu__item: a(href="#").mobile-menu__link Портфоли
+							li.mobile-menu__item: a(href="#").mobile-menu__link Услуги
+								ul.mobile-menu__services
+									li.mobile-menu__services-item
+										a(href="#").mobile-menu__services-link Разработка сайтов и сервисов
+									li.mobile-menu__services-item
+										a(href="#").mobile-menu__services-link Комплексный маркетинг
+									li.mobile-menu__services-item
+										a(href="#").mobile-menu__services-link E-commerce решения
+									li.mobile-menu__services-item
+										a(href="#").mobile-menu__services-link Графический и веб-дизайн
+									li.mobile-menu__services-item
+										a(href="#").mobile-menu__services-link Мобильные приложения
+									li.mobile-menu__services-item
+										a(href="#").mobile-menu__services-link Бизнес-сервисы
+							li.mobile-menu__item: a(href="#").mobile-menu__link Студия
+							li.mobile-menu__item: a(href="#").mobile-menu__link Контакты
+						p.mobile-menu__copyright © 2009 - 2023 SEOTLT
 
 		.page__content
 			block content
 
 		footer.page__footer.page__wrap.footer
 			.footer__menu
-				nav.menu
+				nav.menu.menu--theme-footer
 					ul.menu__lists
-						li.menu__item: a(href="#").menu__link.menu__link--theme-footer Портфолио
-						li.menu__item: a(href="#").menu__link.menu__link--theme-footer Услуги
-						li.menu__item: a(href="#").menu__link.menu__link--theme-footer Студия
-						li.menu__item: a(href="#").menu__link.menu__link--theme-footer Контакты
+						li.menu__item: a(href="#").menu__link Портфолио
+						li.menu__item: a(href="#").menu__link Услуги
+						li.menu__item: a(href="#").menu__link Студия
+						li.menu__item: a(href="#").menu__link Контакты
 			.footer__info
 				.footer__contact
 					.footer__title Project manager

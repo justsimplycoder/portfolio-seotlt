@@ -8,59 +8,57 @@
 		padding 0
 		display flex
 		list-style none
-		column-gap 5%
-	&__link
-		text-decoration none
-		color #fff
-		transition .3s
+	~/__link
+		display: block
+		text-decoration: none
+		font-family: 'Roboto', sans-serif
+		font-weight: 500
+		font-size: 16px
+		margin: 0 25px
+		color: #36434d
+		transition: .3s
+		position: relative
+		&:before
+		&:after
+			position absolute
+			display block
+			transition .3s
+			opacity 0
+			color: #3f3f3f
+			font-size: 18px
+			top: -1px
+		&:before
+			left: -5px
+			content: '['
+		&:after
+			right: -5px
+			content: ']'
 		&:hover
-			color #fff
-		&--theme-footer
+			color #268ef6
+			&:before
+				opacity 1
+				left: -15px
+			&:after
+				opacity 1
+				right: -15px
+	&--theme-footer
+		& ^[0]__item
+			margin-right 5%
+			margin-bottom 10px
+		& ^[0]__link
 			font-size 16px
 			font-weight bold
 			color #fff
+			margin 0
+			font-family: 'PT Sans Caption', sans-serif
 			&:hover
-				color #fff
+				color #268ef6
+			&:before
+			&:after
+				display none
 
 // Adaptive
-@media screen and (max-width: 425px)
-	.menu
-		&__lists
-			top 0
-			left 0
-			position fixed
-			width 100%
-			height 100vh
-			background rgb(51,153,204)
-			z-index 1
-			display flex
-			opacity 0
-			flex-direction column
-			align-items center
-			justify-content center
-			font-size 1.5rem
-			&--is-show
-				animation-name: animation-menu-show
-				animation-duration: .5s
-				animation-fill-mode both
-				display flex
-			&--is-hide
-				animation-name: animation-menu-hide
-				animation-duration: .5s
-				animation-fill-mode both
-		&__link
-			padding-top 15px
-			padding-bottom 15px
+// @media screen and (max-width: 425px)
 
-// Animation
-@keyframes animation-menu-show
-	from
-		opacity 0
-	to
-		opacity 1
-@keyframes animation-menu-hide
-	from
-		opacity 1
-	to
-		opacity 0
-		display none
+
+
