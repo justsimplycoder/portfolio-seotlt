@@ -5,21 +5,22 @@
 	&__item
 		height 600px
 		position relative
+		background-size auto 100%
+		background-repeat no-repeat
+		@media screen and (max-width 1024px)
+			height 500px
 		&--theme-papa-pekar
 			background-color #fcefdb
 			background-image: url(../img/project-one-bg.jpg)
 			background-position: left center
-			background-repeat no-repeat
 		&--theme-mysko-plus
 			background-color #ebe6d6
 			background-image: url(../img/project-six-bg.jpg)
 			background-position: right center
-			background-repeat no-repeat
 		&--theme-tlt-telekom
 			background-color #eef2fe
 			background-image: url(../img/project-three-bg.jpg)
 			background-position: left center
-			background-repeat no-repeat
 		~/__info
 			min-width 36%
 			position absolute
@@ -27,6 +28,12 @@
 			padding 30px 5% 70px
 			transition: .6s
 			overflow hidden
+			@media screen and (max-width 1024px)
+				min-width 26%
+				top 85px
+			@media screen and (max-width 550px)
+				top 65px
+				width 90%
 			&:before
 				content: ''
 				position: absolute
@@ -40,16 +47,34 @@
 			&--theme-papa-pekar
 				background-color #fca74b
 				right: -70px
+				@media screen and (max-width 1440px)
+					right -35px
+				@media screen and (max-width 992px)
+					right 15px
+				@media screen and (max-width 550px)
+					right 5%
 				&:before
 					border 160px solid #ffaf51
 			&--theme-mysko-plus
 				background-color #dc3d3c
 				left: -70px
+				@media screen and (max-width 1440px)
+					left -35px
+				@media screen and (max-width 992px)
+					left 15px
+				@media screen and (max-width 550px)
+					left 5%
 				&:before
 					border 160px solid #e14d49
 			&--theme-tlt-telekom
 				background-color #588bfb
 				right: -70px
+				@media screen and (max-width 1440px)
+					right -35px
+				@media screen and (max-width 992px)
+					right 15px
+				@media screen and (max-width 550px)
+					right 5%
 				&:before
 					border 160px solid #5f8fff
 			~/__title
@@ -58,6 +83,9 @@
 				line-height: 45px
 				color: #fff
 				font-weight: 700
+				@media screen and (max-width 1024px)
+					font-size 35px
+					line-height 40px
 			~/__btn
 				position relative
 

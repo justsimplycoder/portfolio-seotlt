@@ -29,11 +29,14 @@ block content
 
 	section.about.page__wrap
 		.about__show
+			.about__circle-1
+			.about__circle-2
+			.about__play
 		.about__info
 			h2.about__title Мы digital студия, которая <span>создает и развивает интернет-проекты</span> любой сложности, проявляет себя в интересных дизайн-решениях.
 			p.about__text Мы одинаково хорошо справляемся с серьезными интеграциями, комплексными разработками, нетиповым функционалом для e-commerce и созданием креативных, нестандартных концепций для лэндингов и корпоративных сайтов. Мы помогаем легко воплотить самые смелые идеи.
 			a.about__btn.btn.btn--theme-white Узнать больше
-			a.about__btn.btn.btn--theme-blue.btn--right-arrow
+			a.about__btn.btn.btn--theme-blue.btn--left-arrow
 				include ../img/iconsvg/arrow-down.svg
 				| Презентация
 
@@ -96,7 +99,10 @@ block content
 		.swiper.review__wrap#swiper-review
 			.swiper-wrapper
 				.swiper-slide.review__slide
-					.review__img: img(src="/img/review-01.jpg")
+					.review__img
+						picture
+							source(media="(max-width: 768px)" srcset="/img/review-mobile-01.jpg 768w")
+							img(src="/img/review-01.jpg")
 					.review__body
 						.review__text Молодой, энергичный и созидательный коллектив Seotlt помог нашей компании увидеть новые перспективы развития и формы продвижения. Надеемся на дальнейшее взаимовыгодное партнерство!
 						.review__autor Михаил Липин, Директор сети пиццерий «Папа Пекарь»
@@ -106,7 +112,10 @@ block content
 								| СКАЧАТЬ ОРИГИНАЛ
 							img(src="/img/papapekar.png").review__logo
 				.swiper-slide.review__slide
-					.review__img: img(src="/img/review-02.jpg")
+					.review__img
+						picture
+							source(media="(max-width: 768px)" srcset="/img/review-mobile-02.jpg 768w")
+							img(src="/img/review-02.jpg")
 					.review__body
 						.review__text Группа компаний "Тольятти Телеком" выражает благодарность коллективу компании Seotlt за профессионализм в подготовке и реализации проекта по созданию сайта www.totel.ru. Работа была завершена в срок, с высокой ответственностью, учтены все пожелания заказчика.
 						.review__autor Владимир Тихонов, Генеральный директор "Тольятти Телеком"
@@ -116,7 +125,10 @@ block content
 								| СКАЧАТЬ ОРИГИНАЛ
 							img(src="/img/totel.png").review__logo
 				.swiper-slide.review__slide
-					.review__img: img(src="/img/review-03.jpg")
+					.review__img
+						picture
+							source(media="(max-width: 768px)" srcset="/img/review-mobile-03.jpg 768w")
+							img(src="/img/review-03.jpg")
 					.review__body
 						.review__text Удобство работы с командой SEOTLT обуславливается тем, что специалисты, работающие над проектом, вникают в суть технического задания, непосредственно, на территории нашей компании, на "живых" примерах.
 						.review__autor Дмитрий Мандычев, Директор компании "Манро Механика"
@@ -168,11 +180,11 @@ block content
 						button(type="submit").btn.btn--theme-blue.btn--right-arrow
 							| Отправить
 							include ../img/iconsvg/arrow-next.svg
-					.form__group.form__group--w-full
+					.form__group--w-full
 						label.form__consent.switch(for="form__consent")
 							input(type="checkbox" checked required)#form__consent
 							.switch__checkbox
-							|	Даю согласие на обработку &nbsp;<a href="#">персональных данных</a>
+							span Даю согласие на обработку <a href="#">персональных данных</a>
 			.feedback__footer
 				a.about__btn.btn.btn--theme-white.btn--left-arrow
 					include ../img/iconsvg/arrow-down.svg

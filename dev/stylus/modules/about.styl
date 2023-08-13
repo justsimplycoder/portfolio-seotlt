@@ -7,6 +7,12 @@
 	align-items: stretch
 	overflow hidden
 	position relative
+	height 800px
+	@media screen and (max-width 1440px)
+		height 700px
+	@media screen and (max-width 1024px)
+		display block
+		height auto
 	&:before
 		content: ''
 		position: absolute
@@ -17,26 +23,105 @@
 		width: 820px
 		height: 820px
 	&__show
-		width 50%
-		// height: auto
+		width 45%
 		background: url(../img/about_bg.jpg) no-repeat
 		background-position: center
 		background-size: cover
 		position: relative
+		&:hover ^[0]__play
+			transform: translate(-50%, -50%) scale(1.2)
+		@media screen and (max-width 1024px)
+			width 100%
+			height 500px
+		@media screen and (max-width 550px)
+			height 400px
+		~/__circle-1
+			position: absolute
+			top: 43%
+			left: 50%
+			transform translate(-50%)
+			width: 140px
+			height: 140px
+			opacity: .34
+			background: #fff
+			border-radius: 50%
+			animation: animationWave cubic-bezier(0, 0.54, 0.53, 1) 1.5s
+			animation-delay: .5s
+			animation-iteration-count: infinite
+			animation-fill-mode: forwards
+		~/__circle-2
+			top: 43%
+			left: 50%
+			position: absolute
+			width: 140px
+			height: 140px
+			transform translate(-50%)
+			opacity: .34
+			background: #fff
+			border-radius: 50%
+			animation: animationWave cubic-bezier(0, 0.54, 0.53, 1) 1.5s
+			animation-delay: 0s
+			animation-iteration-count: infinite
+			animation-fill-mode: forwards
+		~/__play
+			width: 45px
+			height: 45px
+			transition: .4s
+			background: #fff url(../img/iconsvg/play-button.svg) 15px 13px no-repeat
+			background-size: 20px
+			border-radius: 50%
+			position: absolute
+			top: 43%
+			left: 50%
+			transform: translate(-50%, -50%)
+			cursor: pointer
 	&__info
-		width 50%
-		padding 70px
+		width 55%
+		padding 10% 12% 10% 10%
 		padding-top 20px
 		position relative
-	&__title
-		font-size: 30px
-		line-height: 36px
-		margin-bottom: 40px
-		> span
-			color #268ef6
-	&__text
-		font-size: 18px
-		line-height: 30px
-		margin-bottom: 60px
-	&__btn
-		margin-right 5%
+		@media screen and (max-width 1440px)
+			padding 4% 9% 4% 6%
+		@media screen and (max-width 1200px)
+			padding 2% 2% 2% 4%
+		@media screen and (max-width 1024px)
+			width 100%
+			padding 4% 6%
+		~/__title
+			font-size: 30px
+			line-height: 36px
+			margin-bottom: 40px
+			@media screen and (max-width 1024px)
+				font-size: 26px
+				line-height: 32px
+				margin-bottom: 30px
+			> span
+				color #268ef6
+		~/__text
+			font-size: 18px
+			line-height: 30px
+			margin-bottom: 60px
+			@media screen and (max-width 1024px)
+				font-size: 17px
+				line-height: 28px
+				margin-bottom: 50px
+			@media screen and (max-width 550px)
+				font-size: 16px
+				line-height: 26px
+		~/__btn
+			& + &
+				margin-left 5%
+				@media screen and (max-width 550px)
+					margin 5% 0
+
+@keyframes animationWave
+	80%
+		opacity: .34
+	0%
+		opacity: .34
+		transform: translate(-50%, -50%) scale(0)
+	100%
+		opacity: 0
+		transform: translate(-50%, -50%) scale(1)
+
+

@@ -1,15 +1,18 @@
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.mobile-menu__nav');
+const overlay = document.querySelector('.mobile-menu__overlay');
 const wrap = document.querySelector('.mobile-menu__wrap');
-hamburger.addEventListener('click', event => {
+hamburger?.addEventListener('click', event => {
 	nav.classList.toggle('mobile-menu__nav--is-show');
-	wrap.classList.toggle('mobile-menu__wrap--is-show');
+	overlay.classList.toggle('mobile-menu__overlay--is-show');
 	hamburger.classList.toggle('hamburger--is-active');
+	wrap.classList.toggle('mobile-menu__wrap--is-show');
 });
-wrap.addEventListener('click', event => {
+overlay?.addEventListener('click', event => {
 	nav.classList.toggle('mobile-menu__nav--is-show');
-	wrap.classList.toggle('mobile-menu__wrap--is-show');
+	overlay.classList.toggle('mobile-menu__overlay--is-show');
 	hamburger.classList.toggle('hamburger--is-active');
+	wrap.classList.toggle('mobile-menu__wrap--is-show');
 });
 
 // Слайдеры
@@ -35,6 +38,7 @@ new Swiper('#swiper-services', {
 });
 // секция review
 new Swiper('#swiper-review', {
+	autoHeight: true,
 	direction: 'horizontal',
 	loop: true,
 	pagination: {

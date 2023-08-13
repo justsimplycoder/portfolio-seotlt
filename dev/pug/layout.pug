@@ -27,36 +27,37 @@ html(lang="ru")
 				.header__menu
 					nav.menu
 						ul.menu__lists
-							li.menu__item: a(href="#").menu__link Портфоли
+							li.menu__item: a(href="#").menu__link Портфолио
 							li.menu__item: a(href="#").menu__link Услуги
 							li.menu__item: a(href="#").menu__link Студия
 							li.menu__item: a(href="#").menu__link Контакты
 				.header__mobile-menu.mobile-menu
-					.mobile-menu__wrap
+					.mobile-menu__overlay
 					.mobile-menu__nav
 						.mobile-menu__top
 							a(href="tel:+78482783606").mobile-menu__phone +7 (8482) 78-36-06
 							.hamburger.mobile-menu__hamburger: .hamburger__line
-						ul.mobile-menu__lists
-							li.mobile-menu__item: a(href="#").mobile-menu__link Главная
-							li.mobile-menu__item: a(href="#").mobile-menu__link Портфоли
-							li.mobile-menu__item: a(href="#").mobile-menu__link Услуги
-								ul.mobile-menu__services
-									li.mobile-menu__services-item
-										a(href="#").mobile-menu__services-link Разработка сайтов и сервисов
-									li.mobile-menu__services-item
-										a(href="#").mobile-menu__services-link Комплексный маркетинг
-									li.mobile-menu__services-item
-										a(href="#").mobile-menu__services-link E-commerce решения
-									li.mobile-menu__services-item
-										a(href="#").mobile-menu__services-link Графический и веб-дизайн
-									li.mobile-menu__services-item
-										a(href="#").mobile-menu__services-link Мобильные приложения
-									li.mobile-menu__services-item
-										a(href="#").mobile-menu__services-link Бизнес-сервисы
-							li.mobile-menu__item: a(href="#").mobile-menu__link Студия
-							li.mobile-menu__item: a(href="#").mobile-menu__link Контакты
-						p.mobile-menu__copyright © 2009 - 2023 SEOTLT
+						.mobile-menu__wrap
+							ul.mobile-menu__lists
+								li.mobile-menu__item: a(href="#").mobile-menu__link Главная
+								li.mobile-menu__item: a(href="#").mobile-menu__link Портфоли
+								li.mobile-menu__item: a(href="#").mobile-menu__link Услуги
+									ul.mobile-menu__services
+										li.mobile-menu__services-item
+											a(href="#").mobile-menu__services-link Разработка сайтов и сервисов
+										li.mobile-menu__services-item
+											a(href="#").mobile-menu__services-link Комплексный маркетинг
+										li.mobile-menu__services-item
+											a(href="#").mobile-menu__services-link E-commerce решения
+										li.mobile-menu__services-item
+											a(href="#").mobile-menu__services-link Графический и веб-дизайн
+										li.mobile-menu__services-item
+											a(href="#").mobile-menu__services-link Мобильные приложения
+										li.mobile-menu__services-item
+											a(href="#").mobile-menu__services-link Бизнес-сервисы
+								li.mobile-menu__item: a(href="#").mobile-menu__link Студия
+								li.mobile-menu__item: a(href="#").mobile-menu__link Контакты
+							p.mobile-menu__copyright © 2009 - 2023 SEOTLT
 
 		.page__content
 			block content

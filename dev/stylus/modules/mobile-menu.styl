@@ -2,84 +2,101 @@
 	.mobile-menu - модуль секция мобильное меню
  -----------------------------------------------------------------*/
 .mobile-menu
-	--width-menu: 470px
-	width calc(var(--width-menu) - 135px)
-	&__top
-		width calc(var(--width-menu) - 135px - 75px)
-		display flex
-		align-items center
-		justify-content space-between
-		height 100px
-		~/__phone
-			font-family: 'Roboto', sans-serif
-			font-weight: 500
-			text-decoration: none
-			font-size: 18px
-			letter-spacing: 0.5px
-			white-space: nowrap
-			border-bottom: 1px dotted rgba(38, 142, 246, 0.5)
-	// &__hamburger
-	&__wrap
+	--width-menu: 320px
+	--padding-left-menu: 70px
+	position relative
+	align-self flex-start
+	width var(--width-menu)
+	&__overlay
 		position fixed
-		width calc(100% - var(--width-menu))
+		width calc(100% - 135px)
 		height 100vh
 		left 0
 		top 0
 		background-color rgba(126, 190, 254, 0.5)
 		display none
+		z-index 3
 		&--is-show
 			display block
 	~/__nav
 		right 0
 		top 0
 		position absolute
-		background-color #FFF
+		// background-color #FFF
 		width var(--width-menu)
-		padding-left: 75px
-		height 100px
 		overflow hidden
 		display block
+		z-index 4
 		&--is-show
 			height 100vh
+			background-color #FFF
+		~/__top
+			width var(--width-menu)
+			padding-left var(--padding-left-menu)
 			display flex
-			flex-direction column
-		~/__lists
-			font-size: 35px
-			list-style none
-			padding 0
-			flex 1
-			~/__item
-				line-height 1.8
-				font-weight 700
-				~/__link
-					color: #3d484f
-					text-decoration none
-					transition .3s
-				~/__services
-					font-size: 20px
-					list-style none
-					padding 0
-					font-weight 400
-					~/__services-item
-						margin-bottom .3em
-						~/__services-link
-							color: #3d484f
-							text-decoration none
-							transition .3s
+			align-items center
+			justify-content space-between
+			height 100px
+			@media screen and (max-width 1440px)
+				height 70px
+			~/__phone
+				font-family: 'Roboto', sans-serif
+				font-weight: 500
+				text-decoration: none
+				font-size: 18px
+				letter-spacing: 0.5px
+				white-space: nowrap
+				border-bottom: 1px dotted rgba(38, 142, 246, 0.5)		flex-direction column
+		~/__wrap
+			display none
+			overflow-y scroll
+			position fixed
+			padding-left var(--padding-left-menu)
+			padding-right 10px
+			height calc(100vh - 100px)
+			width calc(var(--width-menu) + 135px)
+			background-color #FFF
+			@media screen and (max-width 1440px)
+				height calc(100vh - 70px)
+			@media screen and (max-width 768px)
+				padding-right 70px
+			&--is-show
+				display block
+			@media screen and (max-width 1440px)
+				width calc(var(--width-menu) + 70px)
+			~/__lists
+				font-size: 35px
+				list-style none
+				padding 0
+				margin 0
+				flex 1
+				@media screen and (max-width 768px)
+					font-size 33px
+				@media screen and (max-width 550px)
+					font-size 30px
+				~/__item
+					line-height 1.8
+					font-weight 700
+					~/__link
+						color: #3d484f
+						text-decoration none
+						transition .3s
+					~/__services
+						font-size: 20px
+						list-style none
+						padding 0
+						font-weight 400
+						@media screen and (max-width 768px)
+							font-size 18px
+						@media screen and (max-width 550px)
+							font-size 15px
+						~/__services-item
+							margin-bottom .3em
+							~/__services-link
+								color: #3d484f
+								text-decoration none
+								transition .3s
 			~/__copyright
 				padding-bottom: 50px
 				font-size: 14px
 				transition .3s
-				// position absolute
-				// bottom 0
-	// &__phone
-	// &__hamburger
-	// 	~/__item
-	// 		~/__link
-	// 		// ul.menu-services
-	// 		// 	li.menu-services__item: a(href="#").menu-services__link Разработка сайтов и сервисов
-	// 		// 	li.menu-services__item: a(href="#").menu-services__link Комплексный маркетинг
-	// 		// 	li.menu-services__item: a(href="#").menu-services__link E-commerce решения
-	// 		// 	li.menu-services__item: a(href="#").menu-services__link Графический и веб-дизайн
-	// 		// 	li.menu-services__item: a(href="#").menu-services__link Мобильные приложения
-	// 		// 	li.menu-services__item: a(href="#").menu-services__link Бизнес-сервисы

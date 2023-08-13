@@ -6,6 +6,12 @@
 	background-color #84c5ff
 	position: relative
 	overflow: hidden
+	@media screen and (min-width 992px)
+		padding 80px 7% 70px
+	@media screen and (max-width 768px)
+		padding 60px 5% 50px
+	@media screen and (max-width 550px)
+		padding 30px 5% 30px
 	&:before
 	&:after
 		content ''
@@ -16,8 +22,8 @@
 		display block
 		position absolute
 	&:before
-		top: -420px
-		left: -400px
+		top: -410px
+		left: -390px
 	&:after
 		bottom: -440px
 		right: -410px
@@ -26,11 +32,16 @@
 		background-repeat: no-repeat
 		background-position bottom left
 		background-size contain
-		left 5%
+		left 6%
 		position absolute
 		bottom 0
 		width 100%
 		height 95%
+		@media screen and (max-width 1440px)
+			left 0
+			height 93%
+		@media screen and (max-width 992px)
+			display none
 	&__block
 		position relative
 		z-index 1
@@ -39,28 +50,52 @@
 		border-radius: 3px
 		right: -45%
 		background-color #FFF
+		@media screen and (max-width 1440px)
+			right -46%
+		@media screen and (max-width 992px)
+			width 100%
+			right 0
 		~/__body
 			padding: 70px 10%
+			@media screen and (max-width 992px)
+				padding 40px 5%
 			~/__title
 				margin: 0 0 20px
 				font-size: 60px
 				line-height: 62px
 				font-weight bold
+				@media screen and (max-width 992px)
+					font-size: 50px
+					line-height 1.1
+				@media screen and (max-width 550px)
+					font-size 45px
+					line-height 47px
 			~/__text
 				font-size: 28px
 				margin: 0
 				line-height: 1.2
 				font-weight bold
+				@media screen and (max-width 550px)
+					font-size: 26px
+					line-height: 1
 			~/__contact
 				margin 5px 0
+				font-size: 20px
+				@media screen and (max-width 550px)
+					font-size: 15px
 				~/__link
-					font-size: 20px
 					text-decoration: none
 					color: #36434d
 					& + &
 						margin-left 5%
+			~/__form
+				padding-top 34px
+				@media screen and (max-width 550px)
+					padding-top 10px
 		~/__footer
 			padding: 0 10%
+			@media screen and (max-width 992px)
+				padding 0 5%
 			height 95px
 			display flex
 			align-items center
@@ -69,3 +104,8 @@
 		~/__text-brif
 			position relative
 			left -15px
+			@media screen and (max-width 550px)
+				font-size 12px
+				text-align center
+				left 0
+				line-height 1.4em

@@ -20,9 +20,16 @@
 		margin-bottom: 56px
 		font-size 55px
 		margin-left 10%
+		font-weight bold
+		position relative
+		@media screen and (max-width 1024px)
+			margin-left 7%
+			font-size 46px
 	&__wrap
 		margin 70px 10% 60px
 		box-shadow: 0 0 70px rgba(38, 142, 246, 0.12)
+		@media screen and (max-width 1024px)
+			margin 20px 7%
 	.swiper-wrapper
 		background-color #FFF
 	&__slide
@@ -30,13 +37,20 @@
 		overflow hidden
 		margin-left 1px
 		background-color #FFF
+		@media screen and (max-width 768px)
+			flex-direction column
 	~/__img
 		display: flex
 		// justify-content: center
 		align-items: flex-start
 		width 270px
-		> img
-			width 270px
+		@media screen and (max-width 768px)
+			width 100%
+		& picture
+			width 100%
+		& img
+			width 100%
+			height auto
 	&__body
 		flex 1
 		padding: 30px 5%
@@ -47,6 +61,9 @@
 			font-size: 20px
 			line-height: 34px
 			flex-grow: 1
+			@media screen and (max-width 1024px)
+				font-size: 16px
+				line-height: 1.8
 		~/__autor
 			font-size: 16px
 			color: #8594a8
@@ -64,10 +81,20 @@
 			padding-top 30px
 			position relative
 			width min-content
+			@media screen and (max-width 768px)
+				justify-content center
+				width 100%
+			~/__autor
+				@media screen and (max-width 550px)
+					margin-top 20px
+					margin-bottom 20px
 			~/__logo
 				width 120px
-				position absolute
-				right -166px
+				margin-left 20px
+				@media screen and (max-width 550px)
+					display none
+				// position absolute
+				// right -166px
 	&__navigation
 		display flex
 		justify-content center

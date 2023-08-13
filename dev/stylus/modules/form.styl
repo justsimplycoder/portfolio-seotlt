@@ -7,7 +7,6 @@
 	justify-content: space-between
 	--gap: 20px
 	gap var(--gap)
-	padding-top 34px
 	~/__group
 		position relative
 		display flex
@@ -16,8 +15,12 @@
 			width 100%
 		&--w-6-12
 			width calc(50% - var(--gap) / 2)
+			@media screen and (max-width 550px)
+				width 100%
 		&--start-right
 			justify-content end
+			@media screen and (max-width 550px)
+				justify-content start
 		~/__label
 			position absolute
 			color: #7093c0
@@ -26,6 +29,8 @@
 			left: 30px
 			transition: .3s
 			cursor: text
+			@media screen and (max-width 375px)
+				font-size 14px
 		~/__input
 			background: #e7f1fe
 			padding: 15px 30px 0
@@ -34,8 +39,7 @@
 			height: 55px
 			border-radius: 30px
 			border: 0
-			&--w-full
-				width 100%
+			width 100%
 			&:focus + .form__label
 			&--focus + .form__label
 				font-size 11px

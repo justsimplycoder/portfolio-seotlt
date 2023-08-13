@@ -6,6 +6,9 @@
 	padding: 70px 7%
 	position: relative
 	overflow: hidden
+	@media screen and (max-width 1024px)
+		padding 40px 3.5% 70px
+		margin-top 70px
 	&:before
 		content: ''
 		position: absolute
@@ -15,11 +18,18 @@
 		width: 820px
 		height: 820px
 	&__title
-		margin: 20px 0
+		margin: 20px 0 20px 32px
 		position: relative
 		font-size: 60px
 		line-height: 62px
 		padding-bottom 16px
+		@media screen and (max-width 768px)
+			font-size: 50px
+			line-height: 52px
+			margin-left 0
+		@media screen and (max-width 550px)
+			font-size: 45px
+			line-height: 47px
 	&__list
 		display flex
 		flex-wrap wrap
@@ -31,17 +41,33 @@
 		position: relative
 		border-radius: 2px
 		overflow hidden
+		border-radius: 2px
+		@media screen and (max-width 1024px)
+			width 100%
+		@media screen and (max-width 992px)
+			padding-left 100px
+			padding-right 25px
+			background: #fff
+			margin-bottom 10px
+			box-shadow 0 0 68px rgba(38, 142, 246, 0.12)
+			border-radius: 0
 		&:hover
 			background: #fff
-			border-radius: 8px
 			box-shadow: 0 0 68px rgba(38, 142, 246, 0.12)
 			& > ^[0]__btn
 				opacity 1
 				transform: translateY(-10px)
+				@media screen and (max-width 992px)
+					transform: translateY(0px)
 	&__img
 		position absolute
 		margin-left -120px
 		margin-top 26px
+		@media screen and (max-width 992px)
+			margin-top 12px
+			margin-left -75px
+			& > svg
+				width 60%
 	&__name
 		font-family: 'ClearSansBold'
 		font-size: 25px
@@ -58,6 +84,8 @@
 		font-size: 17px
 		color: #288ff8
 		letter-spacing: 1px
+		@media screen and (max-width 992px)
+			margin-top 20px
 		& > span
 			font-size: 19px
 	&__btn
@@ -65,3 +93,6 @@
 		position absolute
 		opacity: 0
 		z-index: 1
+		@media screen and (max-width 992px)
+			transform translateY(0px)
+			opacity 1
